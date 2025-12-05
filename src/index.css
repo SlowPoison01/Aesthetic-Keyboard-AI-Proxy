@@ -1,0 +1,42 @@
+/* Apply Tailwind CSS base styles */
+@tailwind base;
+/* Apply Tailwind CSS component styles */
+@tailwind components;
+/* Apply Tailwind CSS utility classes */
+@tailwind utilities;
+
+/* Custom CSS Variables for Theming 
+  These are defined in index.html and modified by the React App's state.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ensure a smooth transition for all elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--header-text);
+}
